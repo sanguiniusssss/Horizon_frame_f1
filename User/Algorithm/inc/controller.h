@@ -143,6 +143,9 @@ typedef struct __packed pid_t
 
     void (*User_Func1_f)(struct pid_t *pid);
     void (*User_Func2_f)(struct pid_t *pid);
+    #if USE_FUZZY_PID
+    FuzzyRule_t *FuzzyRule;   // 模糊PID规则指针
+    #endif
 } PID_t;
 
 void PID_Init(

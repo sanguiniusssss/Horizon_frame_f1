@@ -8,7 +8,8 @@
  */
 #ifndef __MY_DEFINE
 #define __MY_DEFINE
-
+//是否启用模糊PID
+#define USE_FUZZY_PID   0//1 启用，0 禁用（使用固定PID）
 //INIT成功
 #define RUI_DF_READY 1
 //INIT错误
