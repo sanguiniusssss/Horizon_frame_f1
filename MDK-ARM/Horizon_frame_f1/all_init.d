@@ -7,15 +7,15 @@ horizon_frame_f1/all_init.o: ..\User\Start\All_Init.c \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h \
   ..\Drivers\CMSIS\Include\core_cm3.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\CMSIS\Include\cmsis_version.h \
-  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\keil5\ARM\ARMCLANG\include\stdint.h \
+  C:\Users\Sanguinor\Desktop\rada\Horizon_frame_f1\Drivers\CMSIS\Include\cmsis_version.h \
+  C:\Users\Sanguinor\Desktop\rada\Horizon_frame_f1\Drivers\CMSIS\Include\cmsis_compiler.h \
+  C:\Users\Sanguinor\Desktop\rada\Horizon_frame_f1\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\keil5\ARM\ARMCLANG\include\arm_compat.h \
+  D:\keil5\ARM\ARMCLANG\include\arm_acle.h \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\keil5\ARM\ARMCLANG\include\stddef.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h \
@@ -31,12 +31,10 @@ horizon_frame_f1/all_init.o: ..\User\Start\All_Init.c \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Core\Inc\tim.h ..\Core\Inc\usart.h ..\User\Bsp\inc\RUI_DBUS.h \
-  ..\User\Start\inc\MY_Define.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\User\Start\inc\MY_Define.h D:\keil5\ARM\ARMCLANG\include\string.h \
   ..\Core\Inc\gpio.h ..\User\Bsp\inc\Vision.h \
   ..\User\Bsp\inc\DJI_Motor.h ..\User\Bsp\inc\can_bsp.h \
   ..\Core\Inc\can.h ..\User\Algorithm\inc\controller.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  ..\User\Bsp\inc\bsp_dwt.h ..\User\Algorithm\inc\user_lib.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\math.h \
+  D:\keil5\ARM\ARMCLANG\include\stdlib.h ..\User\Bsp\inc\bsp_dwt.h \
+  ..\User\Algorithm\inc\user_lib.h D:\keil5\ARM\ARMCLANG\include\math.h \
   ..\User\App\inc\Gimbal_Task.h

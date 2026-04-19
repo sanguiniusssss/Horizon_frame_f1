@@ -12,18 +12,16 @@ void RobotTask(uint8_t mode, DBUS_Typedef *DBUS, CONTAL_Typedef *CONTAL)
 
         case 2://云台
         {
-            switch (DBUS->Remote.S2_u8)
+            switch (DBUS->Remote.S2_u8)//遥控器右边的拨码开关
             {
-            case 3:
+            case 3:// 遥控器右边的拨码开关为3时，云台跟随遥控器操作
             {
-                CONTAL->HEAD.Pitch += (float) ((DBUS->Remote.CH3_int16)) * 0.003f;
-                CONTAL->HEAD.Pitch = (CONTAL->HEAD.Pitch > CONTAL->HEAD.Pitch_MAX) ? CONTAL->HEAD.Pitch_MAX : CONTAL->HEAD.Pitch;
-                CONTAL->HEAD.Pitch = (CONTAL->HEAD.Pitch < CONTAL->HEAD.Pitch_MIN) ? CONTAL->HEAD.Pitch_MIN : CONTAL->HEAD.Pitch;
+                CONTAL->HEAD.Pitch += (float) ((DBUS->Remote.CH3_int16)) * 0.003f;// 遥控器左边的拨码开关为3时，云台跟随遥控器操作
+                CONTAL->HEAD.Pitch = (CONTAL->HEAD.Pitch > CONTAL->HEAD.Pitch_MAX) ? CONTAL->HEAD.Pitch_MAX : CONTAL->HEAD.Pitch;// 限制云台俯仰角度在最大最小值之间
 
-                CONTAL->HEAD.Yaw -= (float) (DBUS->Remote.CH2_int16) * 0.007f;
-            }
+                CONTAL->HEAD.Yaw -= (float) (DBUS->Remote.CH2_int16) * 0.007f;// 遥控器左边的拨码开关为3时，云台跟随遥控器操作
                 break;
-            case 1:
+            case 1:// 遥控器右边的拨码开关为1时，云台跟随视觉模块操作
             {
                 if (VisionRxData.Data.isOnline)
                 {
@@ -60,4 +58,5 @@ void RobotTask(uint8_t mode, DBUS_Typedef *DBUS, CONTAL_Typedef *CONTAL)
             
         } break;
     }
+}
 }

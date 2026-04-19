@@ -39,7 +39,7 @@ void RUI_F_DUBS_Resovled( DBUS_UNION_Typdef *Data, DBUS_Typedef *RUI_V_DBUS)
 }
 
 
-void DBUS_OFFLINE_Check(DBUS_Typedef *RUI_V_DBUS)
+void DBUS_OFFLINE_Check(DBUS_Typedef *RUI_V_DBUS)// 遥控离线检测，离线后将遥控数据清零
 {
     RUI_V_DBUS->ONLINE_JUDGE_TIME++;
     if (RUI_V_DBUS->ONLINE_JUDGE_TIME > 100)

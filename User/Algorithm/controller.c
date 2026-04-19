@@ -179,30 +179,27 @@ static void f_PID_ErrorHandle(PID_t *pid);
  * @retval         返回空      null
  */
 void PID_Init(
-    PID_t *pid,
-    float max_out,
-    float intergral_limit,
+    PID_t *pid,//PID结构体指针，
+    float max_out,//输出限幅，单位为控制量的单位，
+    float intergral_limit,//积分限幅，单位为控制量的单位，
 
-    float kpid[3],
+    float A,//变速积分参数A，单位为控制量的单位，
+    float B,//变速积分参数B，单位为控制量的单位，
+    float output_lpf_rc,//输出滤波时间常数，单位为秒，
+    float derivative_lpf_rc,//微分滤波时间常数，单位为秒，
 
-    float A,
-    float B,
-
-    float output_lpf_rc,
-    float derivative_lpf_rc,
-
-    uint16_t ols_order,
+    uint16_t ols_order,//OLS微分阶数，0为不使用OLS微分，1为一阶OLS微分，2为二阶OLS微分，
 
     uint8_t improve)
 {
     pid->IntegralLimit = intergral_limit;//积分限幅
     pid->MaxOut = max_out;//总输出限幅
-    pid->Ref = 0;
+    pid->Ref = 0;//期望值初始值为0
 
     pid->Kp = kpid[0];
     pid->Ki = kpid[1];
     pid->Kd = kpid[2];
-    pid->ITerm = 0;
+    pid->ITerm = 0;//积分项初始值为0
 
     // 变速积分参数
     // coefficient of changing integration rate

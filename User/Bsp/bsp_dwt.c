@@ -45,18 +45,18 @@ static void DWT_CNT_Update(void);
 void DWT_Init(uint32_t CPU_Freq_mHz)
 {
     /* 使能DWT外设 */
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;// 使能DWT外设时钟，必须设置，否则无法使用DWT功能
 
     /* DWT CYCCNT寄存器计数清0 */
-    DWT->CYCCNT = (uint32_t)0u;
+    DWT->CYCCNT = (uint32_t)0u;// 将CYCCNT寄存器清零，开始计数
 
     /* 使能Cortex-M DWT CYCCNT寄存器 */
-    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;// 使能CYCCNT寄存器，开始计数
 
-    CPU_FREQ_Hz = CPU_Freq_mHz * 1000000;
-    CPU_FREQ_Hz_ms = CPU_FREQ_Hz / 1000;
-    CPU_FREQ_Hz_us = CPU_FREQ_Hz / 1000000;
-    CYCCNT_RountCount = 0;
+    CPU_FREQ_Hz = CPU_Freq_mHz * 1000000;// 将CPU频率从MHz转换为Hz
+    CPU_FREQ_Hz_ms = CPU_FREQ_Hz / 1000;// 将CPU频率从Hz转换为kHz，即每毫秒的时钟周期数
+    CPU_FREQ_Hz_us = CPU_FREQ_Hz / 1000000;// 将CPU频率从Hz转换为MHz，即每微秒的时钟周期数
+    CYCCNT_RountCount = 0;// CYCCNT寄存器溢出计数器清零
 }
 
 float DWT_GetDeltaT(uint32_t *cnt_last)

@@ -5,20 +5,20 @@
 
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-    CAN_RxHeaderTypeDef RXMessage;
-    uint8_t Data[8];
-    HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &RXMessage, Data);
+    CAN_RxHeaderTypeDef RXMessage;//接收消息结构体
+    uint8_t Data[8];//接收数据数组
+    HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &RXMessage, Data);//获取接收消息
 
     if (hcan->Instance == CAN1) {
         switch (RXMessage.StdId)
         {
-        case (0X205+YAW):
+        case (0X205+YAW):// 云台电机ID，0x206为yaw轴
         {
-            MotorResolve(&ALL_MOTOR.M6020[YAW], Data);
-            MotorRoundResolve(&ALL_MOTOR.M6020[YAW]);
+            MotorResolve(&ALL_MOTOR.M6020[YAW], Data);// 解析数据
+            MotorRoundResolve(&ALL_MOTOR.M6020[YAW]);// 处理数据
         }
         break;
-        case (0x205+PITCH):
+        case (0x205+PITCH):// 云台电机ID，0x206为yaw轴
         {
             MotorResolve(&ALL_MOTOR.M6020[PITCH], Data);
             MotorRoundResolve(&ALL_MOTOR.M6020[PITCH]);
@@ -56,7 +56,7 @@ void User_IRQHandler(UART_HandleTypeDef *huart)
         //     HAL_UART_Receive_DMA(&huart1, (uint8_t *)VisionRxData.OriginData, sizeof(VisionRxData.OriginData));
         // }
     }
-    if (huart->Instance == USART2)
+    if (huart->Instance == USART2)//视觉串口
     {
        if(__HAL_UART_GET_FLAG(&huart2, UART_FLAG_IDLE))
         {

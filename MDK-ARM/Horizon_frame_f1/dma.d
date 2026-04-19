@@ -6,15 +6,15 @@ horizon_frame_f1/dma.o: ..\Core\Src\dma.c ..\Core\Inc\dma.h \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h \
   ..\Drivers\CMSIS\Include\core_cm3.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\CMSIS\Include\cmsis_version.h \
-  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
+  D:\keil5\ARM\ARMCLANG\include\stdint.h \
+  C:\Users\Sanguinor\Desktop\rada\Horizon_frame_f1\Drivers\CMSIS\Include\cmsis_version.h \
+  C:\Users\Sanguinor\Desktop\rada\Horizon_frame_f1\Drivers\CMSIS\Include\cmsis_compiler.h \
+  C:\Users\Sanguinor\Desktop\rada\Horizon_frame_f1\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\keil5\ARM\ARMCLANG\include\arm_compat.h \
+  D:\keil5\ARM\ARMCLANG\include\arm_acle.h \
   ..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\RoboMaster\SoftWare\MDK537\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\keil5\ARM\ARMCLANG\include\stddef.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h \

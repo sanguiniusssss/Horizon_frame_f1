@@ -26,7 +26,7 @@ typedef struct
     //遥控
     struct
     {
-        int16_t CH0_int16;
+        int16_t CH0_int16;//
         int16_t CH1_int16;
         int16_t CH2_int16;
         int16_t CH3_int16;
@@ -36,7 +36,7 @@ typedef struct
         int8_t Error_int8;
     } Remote;
 
-}DBUS_Typedef;
+}DBUS_Typedef;//遥控数据结构体
 
 
 typedef union  // 使用共用体整合数据
@@ -79,7 +79,7 @@ typedef union  // 使用共用体整合数据
     } DataNeaten;
     // 接收到的数组
     uint8_t  GetData[19];
-}DBUS_UNION_Typdef;
+}DBUS_UNION_Typdef;// 遥控数据共用体
 
 //遥控接收
 void RUI_F_DUBS_Resovled(DBUS_UNION_Typdef *Data, DBUS_Typedef *RUI_V_DBUS);
