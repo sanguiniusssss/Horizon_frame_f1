@@ -32,4 +32,5 @@ horizon_frame_f1/controller.o: ..\User\Algorithm\controller.c \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   D:\keil5\ARM\ARMCLANG\include\string.h \
   D:\keil5\ARM\ARMCLANG\include\stdlib.h ..\User\Bsp\inc\bsp_dwt.h \
-  ..\User\Algorithm\inc\user_lib.h D:\keil5\ARM\ARMCLANG\include\math.h
+  ..\User\Algorithm\inc\user_lib.h D:\keil5\ARM\ARMCLANG\include\math.h \
+  ..\User\Start\inc\MY_Define.h

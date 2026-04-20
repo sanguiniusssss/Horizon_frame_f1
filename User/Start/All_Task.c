@@ -12,7 +12,7 @@ void StartDefaultTask(void)
     All_Init();
     for(;;)
     {
-        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_12);
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_13);
         osDelay(500);
     }
 }

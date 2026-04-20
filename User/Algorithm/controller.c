@@ -63,10 +63,7 @@
 #include "MY_Define.h"      // 包含 USE_FUZZY_PID 宏定义
 #include "bsp_dwt.h"         // 包含 DWT_GetDeltaT 等
 
-/* 如果未定义 USE_FUZZY_PID，则默认禁用 */
-#ifndef USE_FUZZY_PID
-#define USE_FUZZY_PID   0
-#endif
+
 
 /******************************** FUZZY PID **********************************/
 #if USE_FUZZY_PID
